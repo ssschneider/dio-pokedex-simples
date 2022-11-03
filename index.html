@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pokédex simples usando HTML, CSS e Javascript, com paginação, exibindo o nome do Pokémon, seus tipos e sua imagem. Esse é o segundo desafio do Bootcamp Orange Tech+ da DIO.">
+  <meta name="author" content="Sarah Schneider">
+  <meta name="keywords" content="html, css, javascript, pokeapi, pokémon, pokemon, boootcamp, front-end">
 
-  <title>Pokedex Simples</title>
+  <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
+
+  <title>Pokédex</title>
 
   <link rel="stylesheet" href="public/css/reset.css">
   <link rel="stylesheet" href="public/css/style.css">
@@ -14,182 +19,22 @@
 <body>
   <header>
     <img src="public/images/pokeball.svg" alt="pokeball">
-    <h1>PokeDex Simples</h1>
+    <h1>Pokédex</h1>
   </header>
 
   <main>
     <ol id="pokemon-list-display">
-      <li class="grass">
-        <div class="pokemon-name">
-          <h2>BULBASAUR</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>GRASS</h3>
-            <h3>POISON</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/bulbasaur.svg" alt="Bulbasaur">
-          </div>
-        </div>
-      </li>
-
-      <!-- <li class="grass">
-        <div class="pokemon-name">
-          <h2>IVYSAUR</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>GRASS</h3>
-            <h3>POISON</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/ivysaur.svg" alt="Ivysaur">
-          </div>
-        </div>
-      </li>
-
-      <li class="grass">
-        <div class="pokemon-name">
-          <h2>VENUSAUR</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>GRASS</h3>
-            <h3>POISON</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/venusaur.svg" alt="Venusaur">
-          </div>
-        </div>
-      </li>
-
-      <li class="fire">
-        <div class="pokemon-name">
-          <h2>CHARMANDER</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>FIRE</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/charmander.svg" alt="Charmander">
-          </div>
-        </div>
-      </li>
-
-      <li class="fire">
-        <div class="pokemon-name">
-          <h2>CHARMELEON</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>FIRE</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/charmeleon.svg" alt="Charmeleon">
-          </div>
-        </div>
-      </li>
-
-      <li class="fire">
-        <div class="pokemon-name">
-          <h2>CHARIZARD</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>FIRE</h3>
-            <h3>FLYING</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/charizard.svg" alt="Charizard">
-          </div>
-        </div>
-      </li>
-
-      <li class="water">
-        <div class="pokemon-name">
-          <h2>SQUIRTLE</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>WATER</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/squirtle.svg" alt="Squirtle">
-          </div>
-        </div>
-      </li>
-
-      <li class="water">
-        <div class="pokemon-name">
-          <h2>WARTORTLE</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>WATER</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/wartortle.svg" alt="Wartortle">
-          </div>
-        </div>
-      </li>
-
-      <li class="water">
-        <div class="pokemon-name">
-          <h2>BLASTOISE</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>WATER</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/blastoise.svg" alt="Blastoise">
-          </div>
-        </div>
-      </li>
-
-      <li class="electric">
-        <div class="pokemon-name">
-          <h2>PIKACHU</h2>
-        </div>
-
-        <div class="pokemon-data">
-          <div class="pokemon-type">
-            <h3>ELECTRIC</h3>
-          </div>
-
-          <div class="pokemon-image">
-            <img src="public/images/pikachu.svg" alt="Pikachu">
-          </div>
-        </div>
-      </li> -->
     </ol>
+
+    <button id="btn-load-more">LOAD MORE POKÉMONS</button>
   </main>
 
   <footer>
-    <p>STAY TUNED FOR MORE POKEMONS</p>
+    <a href="https://www.linkedin.com/in/sarahmurebs/">GIVE ME SOME FEEDBACK</a>
   </footer>
 
-  <script type="module" src="public/js/consuming-api.js"></script>
-  <script type="module" src="public/js/index.js"></script>
+  <script src="public/js/pokemon-template.js"></script>
+  <script src="public/js/consuming-api.js"></script>
+  <script src="public/js/index.js"></script>
 </body>
 </html>

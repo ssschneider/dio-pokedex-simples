@@ -11,10 +11,15 @@ header h1 {
     color: #0e0e0e;
 }
 
+main {
+    width: fit-content;
+    margin: 0 auto;
+}
+
 main ol {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 3.2rem;
+    grid-template-columns: 1fr;
+    margin: 0 2.4rem;
     gap: 2.4rem 1.8rem;
     justify-content: center;
     align-items: center;
@@ -25,11 +30,19 @@ main ol li {
     flex-direction: column;
     align-items: center;
     text-transform: uppercase;
+    height: 100%;
     gap: 8px;
     border-radius: 16px;
     padding: 1rem 1.2rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: 0.5s ease;
+    background-color: #0e0e0e;
+}
+
+main ol li .pokemon-name h2 {
+    font-size: 2.8rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #0e0e0e;
 }
 
 main ol li:hover {
@@ -48,6 +61,62 @@ main ol li.water {
     background-color: #6BE2EA;
 }
 
+main ol li.normal {
+    background-color: #A8A878;
+}
+
+main ol li.fighting {
+    background-color: #C03028;
+}
+
+main ol li.flying {
+    background-color: #A890F0;
+}
+
+main ol li.poison {
+    background-color: #A040A0;
+}
+
+main ol li.ground {
+    background-color: #E0C068;
+}
+
+main ol li.rock {
+    background-color: #B8A038;
+}
+
+main ol li.bug {
+    background-color: #A8B820;
+}
+
+main ol li.ghost {
+    background-color: #705898;
+}
+
+main ol li.steel {
+    background-color: #B8B8D0;
+}
+
+main ol li.psychic {
+    background-color: #F85888;
+}
+
+main ol li.ice {
+    background-color: #98D8D8;
+}
+
+main ol li.dragon {
+    background-color: #7038F8;
+}
+
+main ol li.dark {
+    background-color: #705848;
+}
+
+main ol li.fairy {
+    background-color: #EE99AC;
+}
+
 main ol li.electric {
     background-color: #EEF13D;
 }
@@ -59,17 +128,19 @@ main ol li .pokemon-name {
 main ol li .pokemon-data {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 12px 32px;
     gap: 8px;
     width: 100%;
 }
 
 main ol li .pokemon-data .pokemon-type h3 {
-    font-size: .8rem;
-    margin-bottom: 4px;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
     padding: 2px 8px;
     border-radius: 50px;
     text-align: center;
+    background-color: #f00;
 }
 
 main ol li.grass .pokemon-data .pokemon-type h3 {
@@ -88,12 +159,98 @@ main ol li.electric .pokemon-data .pokemon-type h3 {
     background-color: #81840C;
 }
 
-footer p {
+main ol li.normal .pokemon-data .pokemon-type h3 {
+    background-color: #52523a;
+}
+
+main ol li.fighting .pokemon-data .pokemon-type h3 {
+    background-color:  #69110c;
+}
+
+main ol li.flying .pokemon-data .pokemon-type h3 {
+    background-color: #6043b6;
+}
+
+main ol li.poison .pokemon-data .pokemon-type h3 {
+    background-color: #631763;
+}
+
+main ol li.ground .pokemon-data .pokemon-type h3 {
+    background-color:  #795d13;
+}
+
+main ol li.rock .pokemon-data .pokemon-type h3 {
+    background-color:  #685814;
+}
+
+main ol li.bug .pokemon-data .pokemon-type h3 {
+    background-color:  #6d770f;
+}
+
+main ol li.ghost .pokemon-data .pokemon-type h3 {
+    background-color:  #402f5c;
+}
+
+main ol li.steel .pokemon-data .pokemon-type h3 {
+    background-color:  #6a6a7c;
+}
+
+main ol li.psychic .pokemon-data .pokemon-type h3 {
+    background-color:  #ad224c;
+}
+
+main ol li.ice .pokemon-data .pokemon-type h3 {
+    background-color: #24a7a7;
+}
+
+main ol li.dragon .pokemon-data .pokemon-type h3 {
+    background-color: #3d1d8a;
+}
+
+main ol li.dark .pokemon-data .pokemon-type h3 {
+    background-color: #423126;
+}
+
+main ol li.fairy .pokemon-data .pokemon-type h3 {
+    background-color: #a14e60;
+}
+
+main ol li .pokemon-data .pokemon-image img {
+    width: 10rem;
+    height: 10rem;
+}
+
+main button, footer a {
+    display: flex;
+    justify-content: center;
     text-align: center;
     background-color: #0e0e0e;
-    max-width: fit-content;
-    margin: 4rem auto;
+    max-width: max-content;
+    margin: 4rem auto 8rem;
     padding: 8px 16px;
-    font-size: 1.4rem;
+    font-size: 2rem;
     border-radius: 25px;
+    border: none;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+main button:hover {
+    letter-spacing: 1px;
+}
+
+footer a {
+    font-size: 1.4rem;
+    border: 1px solid #0e0e0e;
+    background-color: #f1f1f1;
+    color: #0e0e0e;
+}
+
+footer a:hover {
+    color: #f1f1f1;
+    background-color: #0e0e0e;
+}
+
+footer {
+    margin-bottom: 4rem;
 }

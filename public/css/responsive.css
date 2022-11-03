@@ -1,10 +1,14 @@
-@media (min-width: 672px) {
+@media (min-width: 617px) {
     main ol {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     main ol li .pokemon-name {
         font-size: 3.2rem;
+    }
+
+    main ol li .pokemon-data{
+        gap: 24px;
     }
 
     main ol li .pokemon-data .pokemon-type h3 {
@@ -16,13 +20,21 @@
     }
 }
 
-@media (min-width: 946px) {
+@media (min-width: 1000px) {
+    main ol {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     main ol li .pokemon-data .pokemon-image img {
         min-height: 100px;
     }
 
-    footer p {
-        font-size: 2.4rem;
+    main button {
+        font-size: 3.2rem;
+    }
+
+    footer a {
+        font-size: 2rem;
         padding: 4px 32px;
     }
 }

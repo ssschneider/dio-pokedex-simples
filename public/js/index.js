@@ -1,34 +1,48 @@
-const offset = 0
-const limit = 10
-const url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`
+const btnLoadMore = document.getElementById("btn-load-more")
+const displayPokemons = document.getElementById("pokemon-list-display");
+const limit = 12
+let offset = 0
+const maxRecords = 151
 
 function pokemonsToHtml(pokemon) {
-    return `<li class="grass">
+    return `<li class="${pokemon.type}">
     <div class="pokemon-name">
       <h2>${pokemon.name}</h2>
     </div>
 
     <div class="pokemon-data">
-      <div class="pokemon-type">
-        <h3>GRASS</h3>
-        <h3>POISON</h3>
+      <div class= "pokemon-type">
+        ${pokemon.types.map((type) => `<h3>${type}</h3>`).join("")}
       </div>
 
       <div class="pokemon-image">
-        <img src="public/images/bulbasaur.svg" alt="${pokemon.name}">
+        <img src="${pokemon.image}" alt="${pokemon.name}">
       </div>
     </div>
   </li>`;
 }
 
-const displayPokemons = document.getElementById("pokemon-list-display");
+function loadPokemons (offset, limit) {
+    pokeApi.getPokemons(offset, limit).then((pokemons) => {
+        displayPokemons.innerHTML += pokemons.map(pokemonsToHtml).join("")
+    });
+}
 
-pokeApi.getPokemons().then((pokemons) => {
-    const listItems = [];
-    for (let i = 0; i < pokemons.length; i++) {
-        const pokemon = pokemons[i];
-		listItems.push(pokemonsToHtml(pokemon))
-	}
+loadPokemons(offset, limit)
 
-    console.log(listItems);
-});
+btnLoadMore.addEventListener("click", () => {
+    offset += limit
+    const qntdNextPage = offset + limit
+
+    if (qntdNextPage >= maxRecords) {
+        const newLimit = qntdNextPage - maxRecords
+        loadPokemons(offset, newLimit)
+
+        btnLoadMore.parentElement.removeChild(btnLoadMore)
+        return 
+    } else {
+        loadPokemons(offset, limit)
+    }
+
+})
+
