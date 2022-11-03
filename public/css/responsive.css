@@ -1,0 +1,52 @@
+@media (min-width: 672px) {
+    main ol {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main ol li .pokemon-name {
+        font-size: 3.2rem;
+    }
+
+    main ol li .pokemon-data .pokemon-type h3 {
+        font-size: 1.2rem;
+    }
+
+    main ol li .pokemon-data .pokemon-image img {
+        min-height: 80px;
+    }
+}
+
+@media (min-width: 946px) {
+    main ol li .pokemon-data .pokemon-image img {
+        min-height: 100px;
+    }
+
+    footer p {
+        font-size: 2.4rem;
+        padding: 4px 32px;
+    }
+}
+
+@media (min-width: 1160px) {
+    header h1 {
+        font-size: 4.8rem;
+    }
+
+    main ol li .pokemon-name {
+        font-size: 4rem;
+    }
+
+    main ol li .pokemon-data .pokemon-type h3 {
+        font-size: 1.8rem;
+        padding: 8px 16px;
+    }
+
+    main ol li .pokemon-data .pokemon-image img {
+        min-height: 150px;
+    }
+
+    footer p {
+        font-size: 4rem;
+        padding: 4px 32px;
+    }
+}
