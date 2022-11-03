@@ -18,6 +18,6 @@ Nesse desafio são exibidos todos os Pokémons de 1ª Geração, junto aos seus 
 -------
 
 ## Acesse a Pokédex!
-Para acessar a Pokédex basta <a href="#">clicar aqui</a>!
+Para acessar a Pokédex basta <a href="https://ssschneider.github.io/dio-pokedex-simples/">clicar aqui</a>!
 
 
